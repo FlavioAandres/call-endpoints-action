@@ -95,9 +95,9 @@ module.exports.buildRequest = async (basepath, config = {}) => {
 		const content = await streamToString(
 			 (await downloadBodyFile(urlBody)).data
 		)
-		bodyData[uploadType] = { [param]: content } 
+		bodyData[uploadType] = { ...content } 
 	}else{
-		bodyData[uploadType] = { [param]: body }
+		bodyData[uploadType] = { ... body }
 	}
 
 	if(allowKeepAliveAgent) {
