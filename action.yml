@@ -1,0 +1,12 @@
+name: 'HTTP Endpoints Timming'
+description: 'Make calls to your APIs to know how impacted the change you just made'
+inputs:
+  config-file:  # id of input
+    description: 'A JSON File with the necessary information to run the tests.'
+    required: true
+outputs:
+  summary: # id of output
+    description: 'a raw version of the endpoints results'
+runs:
+  using: 'node12'
+  main: 'index.js'
